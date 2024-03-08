@@ -1,0 +1,35 @@
+.top-right-square{
+    height: 70px; 
+    width: 100px; 
+    background-color: #245e57;
+    margin-right: 60px;
+    border-radius: 0 0 10px 10px;
+    opacity: 0.8;
+}
+.mid-square{
+    height: 350px;
+    width: 600px;
+    margin-left: -0.9%;
+    opacity: 0.9;
+    background: #106258;
+    box-shadow: 7px 6px 6px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 0 15px 15px 0;
+
+}
+.bottom-square{
+    height: 70px;
+    width: 100px;
+    background-color: #245e57;
+    border-radius: 10px 10px 0px 0px;
+    opacity: 0.8;
+}
+.bottom-circle{
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+    background-color: #245e57;
+    position: absolute;
+    bottom: -120px;
+    right: -100px;
+    opacity: 0.8;
+}

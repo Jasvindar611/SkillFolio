@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <p class="brandName mt-4 mx-4">
+      Skill<span style="color: red; font-family: inherit; font-size: inherit; font-weight: inherit;">F</span>olio
+    </p>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-2">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/template" routerLinkActive="active">Template</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/resume-builder" routerLinkActive="active" *ngIf="userIsAuthenticated">Resume Builder</a>
+          </li>
+          <li class="nav-item" *ngIf="!userIsAuthenticated">
+            <a class="nav-link " routerLink="/login" routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item" *ngIf="userIsAuthenticated">
+            <a class="nav-link " routerLink="/profile" style="text-transform: uppercase; color: #f79d85; text-decoration: underline;">{{fName}}</a>
+          </li>
+          <li class="nav-item mx-1">
+            <button class="logoutBtn" mat-raised-button (click)="onLogout()" *ngIf="userIsAuthenticated">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+

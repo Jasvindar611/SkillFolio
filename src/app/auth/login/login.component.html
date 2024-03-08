@@ -1,0 +1,38 @@
+<div class="container-fluid text-center">
+      <mat-card [ngClass]="isSmallScreen() ? 'w-100 mt-5' : ''">
+        <mat-card-header>Login</mat-card-header>
+        <div class="text-end"></div>
+        <br>
+        <mat-divider></mat-divider>
+        <div class="text-center">
+            <mat-card-content>
+    
+    
+              <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+                  <mat-form-field appearance="outline" [ngClass]="{ 'w-100': isSmallScreen() }">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput placeholder="Email" name="email" ngModel #emailInput="ngModel" required email>
+                    <mat-icon matSuffix>mail</mat-icon>
+                    <mat-error>Please enter a valid email address</mat-error>
+                  </mat-form-field>
+    
+                  <mat-form-field appearance="outline" [ngClass]="{ 'w-100': isSmallScreen() }">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput placeholder="Password" name="password" ngModel #passwordInput="ngModel" required>
+                    <mat-icon matSuffix>lock</mat-icon>
+                    <mat-error>Please enter a valid password</mat-error>
+                  </mat-form-field><br>
+    
+                  <button type="submit" mat-raised-button class="login-btn">Login</button>
+    
+                </form>
+    
+                  <br>
+                  <p><a href="">Forget Password?</a></p>
+                  <mat-divider style="width: 80%; margin: 0 auto;"></mat-divider>
+                  <a routerLink="/signup"><button mat-stroked-button class="signup-btn">Create New Account</button></a>   
+                
+                </mat-card-content>
+            </div>
+    </mat-card>
+</div>

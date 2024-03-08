@@ -1,0 +1,51 @@
+mat-card{
+    margin: 2% auto;
+    height: auto;
+    width: 600px;
+    background-color: rgb(233, 234, 234);
+    box-shadow: 0 2px 15px black;
+}
+mat-card-header{
+    margin: 0 auto;
+    color: black;
+    font-size: 16pt;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    font-family: Roboto Condensed and Slab;
+}
+mat-card-content{
+    margin: 10px auto;
+}
+mat-form-field{
+    width: 80%;
+}
+.login-btn{
+    width: 170px !important;
+    background-color: #bd2e3a !important;
+    color: white !important;
+}
+p{
+    margin-top: 10px;
+}
+.signup-btn{
+    margin-top: 30px;
+    width: 200px !important;
+    color: #bd2e3a !important;
+    border-color: #bd2e3a !important;
+}
+mat-divider{
+    background-color: #bd2e3a;
+}
+input[type="file"]{
+    visibility: hidden;
+}
+.image-preview{
+    height: 250px;
+    margin: 0 auto;
+}
+.image-preview img{
+    height: 100%;
+}
+.pickImage{
+    margin-left: -13%;
+}

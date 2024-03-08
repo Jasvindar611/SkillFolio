@@ -1,0 +1,44 @@
+mat-card{
+    max-width: 80%;
+    width: auto;
+    margin: 5% auto;
+}
+mat-card-header{
+    margin: 0 auto;
+    color: #bd2e3a;
+    font-family:sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.addIcon{
+   float: left;
+   cursor: pointer;
+}
+.education3{
+    display: none;
+}
+.education3.open{
+    display: block;
+}
+.removeBtn{
+    float: left;
+   cursor: pointer;
+}
+.submitBtn{
+    background-color: #bd2e3a !important;
+    color: white !important;
+}
+
+input[type="file"]{
+    visibility: hidden;
+}
+.image-preview{
+    height: 250px;
+    margin: 0 auto;
+}
+.image-preview img{
+    height: 100%;
+}
+.pickImage{
+    float: left;
+}

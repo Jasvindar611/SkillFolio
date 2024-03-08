@@ -1,0 +1,291 @@
+<mat-card>
+
+    <mat-card-header>Create Resume</mat-card-header>
+
+    <mat-divider class="mt-3"></mat-divider>
+
+    <mat-card-content>
+        <form (submit)="onSubmit()" [formGroup]="form">
+        <div class="container text-center">
+            <h3 class="float-start mt-2 fw-bold">Personal Details :-</h3>
+            <br>
+            <div class="row row-cols-lg-2 rows-cols-md-2 mt-5">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput formControlName="fName">
+                    <mat-icon matSuffix>person</mat-icon>
+                    <mat-error *ngIf="form.get('fName').invalid">First Name must be atleast 3 characters</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input type="text" matInput formControlName="lName" placeholder="Optional*">
+                     <mat-icon matSuffix>person</mat-icon>
+                    <mat-error *ngIf="form.get('lName').invalid">Name must be atleast 3 characters</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="row row-cols-lg-3">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput formControlName="email">
+                    <mat-icon matSuffix>mail</mat-icon>
+                    <mat-error *ngIf="form.get('email').invalid">Enter a vaild Email Address</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile Number</mat-label>
+                    <input type="text" matInput formControlName="mob">
+                    <mat-icon matSuffix>phone</mat-icon>
+                    <mat-error *ngIf="form.get('mob').invalid">Number must be atleast 8 digits</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Date Of Birth</mat-label>
+                    <input type="date" matInput formControlName="dob"  required>
+                    <mat-icon matSuffix>calendar_today</mat-icon>
+                    <mat-error *ngIf="form.get('dob').invalid">Enter a valid date</mat-error>
+                </mat-form-field>
+            </div> 
+            
+            <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <input type="text" matInput formControlName="address" required>
+                        <mat-icon matSuffix>location_on</mat-icon>
+                        <mat-error *ngIf="form.get('address').invalid">Address is required</mat-error>
+                    </mat-form-field>
+            </div>
+
+            <mat-divider class="mt-3"></mat-divider>
+
+            <h3 class="float-start mt-2 fw-bold">EDUCATION :-</h3>
+            <br>
+            <div class="row row-cols-lg-4 rows-cols-md-2 mt-5">
+                <mat-form-field appearance="outline">
+                    <mat-label>Education Level 1</mat-label>
+                    <mat-select formControlName="education1">
+                      <mat-option value="No formal education">No formal education</mat-option>
+                      <mat-option value="Primary education">Primary education</mat-option>
+                      <mat-option value="Secondary education">Secondary education or high school</mat-option>
+                      <mat-option value="GED">GED</mat-option>
+                      <mat-option value="Vocational qualification">Vocational qualification</mat-option>
+                      <mat-option value="Bachelor's degree">Bachelor's degree</mat-option>
+                      <mat-option value="Master's degree">Master's degree</mat-option>
+                      <mat-option value="Doctorate or higher">Doctorate or higher</mat-option>
+                    </mat-select>
+                    <mat-icon matSuffix>school</mat-icon>
+                    <mat-error *ngIf="form.get('education1').invalid">Education level selection is required</mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>College/Institute Name</mat-label>
+                    <input type="text" matInput formControlName="college" required>
+                    <mat-icon matSuffix>school</mat-icon>
+                    <mat-error *ngIf="form.get('college').invalid">College/Institute name is required</mat-error>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Starting Year</mat-label>
+                    <input type="number" matInput formControlName="startYear" required>
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="form.get('startYear').invalid">Starting year is required</mat-error>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="outline">
+                    <mat-label>End Year</mat-label>
+                    <input type="number" matInput formControlName="endYear" required>
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="form.get('endYear').invalid">End year is required</mat-error>
+                  </mat-form-field>
+            </div>
+
+            
+
+            <!-- <div class="row row-cols-lg-4 rows-cols-md-2 mt-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Education Level 2</mat-label>
+                    <mat-select name="education2" ngModel #education2Input="ngModel">
+                      <mat-option value="No formal education">No formal education</mat-option>
+                      <mat-option value="Primary education">Primary education</mat-option>
+                      <mat-option value="Secondary education">Secondary education or high school</mat-option>
+                      <mat-option value="GED">GED</mat-option>
+                      <mat-option value="Vocational qualification">Vocational qualification</mat-option>
+                      <mat-option value="Bachelor's degree">Bachelor's degree</mat-option>
+                      <mat-option value="Master's degree">Master's degree</mat-option>
+                      <mat-option value="Doctorate or higher">Doctorate or higher</mat-option>
+                    </mat-select>
+                    <mat-icon matSuffix>school</mat-icon>
+                    <mat-error *ngIf="education2Input.invalid">Education level selection is required</mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>College/Institute Name</mat-label>
+                    <input type="text" matInput name="college2" ngModel #college2Input="ngModel">
+                    <mat-icon matSuffix>school</mat-icon>
+                    <mat-error *ngIf="college2Input.invalid">College/Institute name is required</mat-error>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Starting Year</mat-label>
+                    <input type="number" matInput name="start2Year" ngModel #startYear2Input="ngModel">
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="startYear2Input.invalid">Starting year is required</mat-error>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="outline">
+                    <mat-label>End Year</mat-label>
+                    <input type="number" matInput name="end2Year" ngModel #endYear2Input="ngModel">
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="endYear2Input.invalid">End year is required</mat-error>
+                  </mat-form-field>
+            </div>
+
+            <mat-icon matSuffix class="addIcon" (click)="openEDU3()">library_add</mat-icon>
+            <br>
+            <div class="row row-cols-lg-4 rows-cols-md-2 mt-2 education3">
+                <mat-form-field appearance="outline">
+                    <mat-label>Education Level 3</mat-label>
+                    <mat-select name="education3" ngModel #education3Input="ngModel">
+                      <mat-option value="No formal education">No formal education</mat-option>
+                      <mat-option value="Primary education">Primary education</mat-option>
+                      <mat-option value="Secondary education">Secondary education or high school</mat-option>
+                      <mat-option value="GED">GED</mat-option>
+                      <mat-option value="Vocational qualification">Vocational qualification</mat-option>
+                      <mat-option value="Bachelor's degree">Bachelor's degree</mat-option>
+                      <mat-option value="Master's degree">Master's degree</mat-option>
+                      <mat-option value="Doctorate or higher">Doctorate or higher</mat-option>
+                    </mat-select>
+                    <mat-icon matSuffix>school</mat-icon>
+                    <mat-error *ngIf="education3Input.invalid">Education level selection is required</mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>College/Institute Name</mat-label>
+                    <input type="text" matInput name="college3" ngModel #college3Input="ngModel">
+                    <mat-icon matSuffix>school</mat-icon>
+                    <mat-error *ngIf="college3Input.invalid">College/Institute name is required</mat-error>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="outline">
+                    <mat-label>Starting Year</mat-label>
+                    <input type="number" matInput name="start3Year" ngModel #startYear3Input="ngModel">
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="startYear3Input.invalid">Starting year is required</mat-error>
+                  </mat-form-field>
+                  
+                  <mat-form-field appearance="outline">
+                    <mat-label>End Year</mat-label>
+                    <input type="number" matInput name="end3Year" ngModel #endYear3Input="ngModel">
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="endYear3Input.invalid">End year is required</mat-error>
+                  </mat-form-field>
+            </div>
+
+            <mat-divider class="mt-3"></mat-divider>
+
+            <h3 class="float-start mt-2 fw-bold">CERTIFICATES :-</h3>
+            <br>
+            <div class="row row-cols-lg-4 rows-cols-md-2 mt-5">
+                <mat-form-field appearance="outline">
+                    <mat-label>Certificate Name 1</mat-label>
+                    <input type="text" matInput name="certificateName1" ngModel #certificateNameInput1="ngModel">
+                    <mat-icon matSuffix>card_membership</mat-icon>
+                    <mat-error *ngIf="certificateNameInput1.invalid">Certificate name is required</mat-error>
+                  </mat-form-field>
+              
+                  <mat-form-field appearance="outline">
+                    <mat-label>Institute </mat-label>
+                    <input type="text" matInput name="institute1" ngModel #instituteInput1="ngModel">
+                    <mat-icon matSuffix>school</mat-icon>
+                    <mat-error *ngIf="instituteInput1.invalid">Institute name is required</mat-error>
+                  </mat-form-field>
+              
+                  <mat-form-field appearance="outline">
+                    <mat-label>Starting Year </mat-label>
+                    <input type="number" matInput name="startYear1" ngModel #startYearInput1="ngModel">
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="startYearInput1.invalid">Starting year is required</mat-error>
+                  </mat-form-field>
+              
+                  <mat-form-field appearance="outline">
+                    <mat-label>Ending Year </mat-label>
+                    <input type="number" matInput name="endYear1" ngModel #endYearInput1="ngModel">
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="endYearInput1.invalid">Ending year is required</mat-error>
+                  </mat-form-field>
+            </div>
+
+            <div class="row row-cols-lg-4 rows-cols-md-2 mt-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>Certificate Name 2</mat-label>
+                    <input type="text" matInput name="certificateName2" ngModel #certificateNameInput2="ngModel">
+                    <mat-icon matSuffix>card_membership</mat-icon>
+                    <mat-error *ngIf="certificateNameInput2.invalid">Certificate name is required</mat-error>
+                  </mat-form-field>
+              
+                  <mat-form-field appearance="outline">
+                    <mat-label>Institute </mat-label>
+                    <input type="text" matInput name="institute2" ngModel #instituteInput2="ngModel">
+                    <mat-icon matSuffix>school</mat-icon>
+                    <mat-error *ngIf="instituteInput2.invalid">Institute name is required</mat-error>
+                  </mat-form-field>
+              
+                  <mat-form-field appearance="outline">
+                    <mat-label>Starting Year </mat-label>
+                    <input type="number" matInput name="startYear2" ngModel #startYearInput2="ngModel">
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="startYearInput2.invalid">Starting year is required</mat-error>
+                  </mat-form-field>
+              
+                  <mat-form-field appearance="outline">
+                    <mat-label>Ending Year </mat-label>
+                    <input type="number" matInput name="endYear2" ngModel #endYearInput2="ngModel">
+                    <mat-icon matSuffix>date_range</mat-icon>
+                    <mat-error *ngIf="endYearInput2.invalid">Ending year is required</mat-error>
+                  </mat-form-field>
+            </div> -->
+
+            <mat-divider class="mt-3"></mat-divider>
+            <h3 class="float-start mt-2 fw-bold">Skills :-</h3>
+            <br>
+            <div class="row mt-5">
+              <mat-form-field class="example-chip-list" appearance="outline">
+                <mat-label>Enter Your Skills</mat-label>
+                <mat-chip-grid #chipGrid aria-label="Enter Skills">
+                  <mat-chip-row *ngFor="let skill of skills"
+                                (removed)="remove(skill)"
+                                [editable]="true"
+                                (edited)="edit(skill, $event)"
+                                [aria-description]="'press enter to edit ' + skill.name">
+                    {{skill.name}}
+                    <button matChipRemove [attr.aria-label]="'remove ' + skill.name">
+                      <mat-icon>cancel</mat-icon>
+                    </button>
+                  </mat-chip-row>
+                  <input placeholder="New skills..."
+                         [matChipInputFor]="chipGrid"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="add($event)" formControlName="skills" />
+                </mat-chip-grid>
+              </mat-form-field> <br>
+            </div>
+
+              <mat-divider class="mt-3"></mat-divider>
+              <h3 class="float-start mt-2 fw-bold">Upload Profile Image :-</h3>
+              <br>
+              <div class="row mt-5">
+                <div>
+                  <button class="pickImage" mat-stroked-button type="button" (click)="filePicker.click()">Pick Image</button>
+                  <input type="file" #filePicker (change)="onImagePicked($event)">
+                </div>
+                <div class="image-preview text-center" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+                  <img [src]="imagePreview" [alt]="form.value.fName">
+                </div>
+              </div>
+              <br><br>
+             <button type="submit" class="submitBtn" mat-raised-button>Submit</button>
+             <mat-divider class="mt-3"></mat-divider>
+            </div>
+    </form>
+    </mat-card-content>
+
+</mat-card>

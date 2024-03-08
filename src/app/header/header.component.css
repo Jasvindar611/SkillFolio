@@ -1,0 +1,38 @@
+.brandName{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 35px;
+}
+.nav-link {
+    margin-right: 60px;
+}
+a{
+    color:white;
+    font-size: 14px;
+    transition: 0.4s;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+a:hover{
+    cursor: pointer;
+    color: #bd2e3a;
+}
+.active{
+    color: #bd2e3a !important;
+}
+.logoutBtn{
+    color:#bd2e3a!important;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color:aliceblue !important;
+}
+.offcanvas{
+    background-color: #193332;
+    width: 40%;
+}
+.navbar-toggler{
+    background-color: aliceblue;
+}

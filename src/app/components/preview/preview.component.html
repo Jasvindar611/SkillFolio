@@ -1,0 +1,108 @@
+
+
+        <div class="container-fluid p-5" *ngFor="let resume of resumes">
+            <div class="row row-cols-md-1 row-cols-lg-2 g-md-3 g-lg-4">
+                <div class="col">
+                    <div class="Frame1" style="width: 595px; height: 842px; position: relative; background: white" *ngFor="let resume of resumes; let i = index;" [id]="'htmlData-' + i">
+                        <div class="Rectangle1" style="width: 595px; height: 842px; left: 0px; top: 0px; position: absolute; background: white"></div>
+                        <div class="FullProfessionalProficiency" style="left: 443px; top: 426px; position: absolute; color: #3D3D3D; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">Full Professional Proficiency</div>
+                        <div class="Hindi" style="left: 538px; top: 409px; position: absolute; color: black; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">Hindi</div>
+                        <div class="FullProfessionalProficiency" style="left: 443px; top: 467px; position: absolute; color: #3D3D3D; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">Full Professional Proficiency</div>
+                        <div class="English" style="left: 525px; top: 449px; position: absolute; color: black; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">English</div>
+                        <div class="OakAcademy" style="left: 18px; top: 679px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">Oak Academy</div>
+                        <div class="FullStackWebDevelopmentWithReactJsAngularAndNodejs" style="width: 230px; left: 18px; top: 615px; position: absolute; color: black; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">Full Stack Web Development with <br/>React JS, Angular and NodeJS</div>
+                        <div class="Skills" style="left: 519px; top: 235px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; word-wrap: break-word">SKILLS</div>
+                        <img class="Ellipse1" style="width: 110px; height: 110px; left: 18px; top: 43px; position: absolute; box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.25); border-radius: 9999px" [src]="resume.imagePath" [alt]="resume.fName" />
+                        <div class="JasvindarSingh" style="left: 152px; top: 43px; position: absolute; color: black; font-size: 28px; font-family: Inter; font-weight: 400; word-wrap: break-word">{{resume.fName + ' ' + resume.lName}}</div>
+                        <div class="Jasvindarsingh611GmailCom" style="left: 429px; top: 60px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; word-wrap: break-word">{{resume.email}}</div>
+                        <div style="left: 514px; top: 95px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; word-wrap: break-word">7665412090</div>
+                        <div class="SuratgarhRajIndia" style="left: 474px; top: 130px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; word-wrap: break-word">{{resume.address}}</div>
+                        <div class="AspiringForAChallengingCareerInWebDevelopementAsToUseMyLearnedSkillsForProfessionalGrowthAndAchieveOrganizationalGoals" style="width: 422px; left: 18px; top: 176px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 400; word-wrap: break-word">Aspiring for a challenging career in Web Developement  as to use my learned skills for professional growth and achieve organizational goals</div>
+                        <div class="Education" style="left: 18px; top: 235px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; word-wrap: break-word">EDUCATION</div>
+                        <div class="Certificates" style="left: 18px; top: 571px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; word-wrap: break-word">CERTIFICATES</div>
+                        <div class="Languages" style="left: 473px; top: 366px; position: absolute; color: black; font-size: 16px; font-family: Inter; font-weight: 700; word-wrap: break-word">LANGUAGES</div>
+                        <div class="Line1" style="width: 279px; height: 0px; left: 18px; top: 267px; position: absolute; border: 0.50px #FF0000 solid"></div>
+                        <div class="Line4" style="width: 279px; height: 0px; left: 18px; top: 603px; position: absolute; border: 0.50px #FF0000 solid"></div>
+                        <div class="Line2" style="width: 226px; height: 0px; left: 18px; top: 373px; position: absolute; border: 0.50px #FF0000 solid"></div>
+                        <div class="Line13" style="width: 226px; height: 0px; left: 348px; top: 399px; position: absolute; border: 0.50px #FF0000 solid"></div>
+                        <div class="Line6" style="width: 226px; height: 0px; left: 348px; top: 266.03px; position: absolute; border: 0.50px #FF0000 solid"></div>
+                        <div class="MasterSInComputerApplication" style="left: 18px; top: 279px; position: absolute; color: black; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">{{resume.education1}}</div>
+                        <div class="JaipurNationalUniversityJnu" style="left: 18px; top: 308px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word"> {{resume.college}}</div>
+                        <div class="2019022021" style="left: 18px; top: 335px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">{{resume.startYear + ' - ' + resume.endYear}}</div>
+                        <div class="BachelorSInComputerApplicatio" style="left: 18px; top: 385px; position: absolute; color: black; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">Bachelor's in Computer Applicatio</div>
+                        <div class="BachelorSInComputerApplicatio" style="left: 18px; top: 414px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Bachelor's in Computer Applicatio</div>
+                        <div class="2017032019" style="left: 18px; top: 441px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">07/2017 - 03/2019</div>
+                        <div class="Line3" style="width: 226px; height: 0px; left: 18px; top: 466px; position: absolute; border: 0.50px #FF0000 solid"></div>
+                        <div class="Line5" style="width: 226px; height: 0px; left: 18px; top: 704.03px; position: absolute; border: 0.50px #FF0000 solid"></div>
+                        <div class="BachelorSInComputerApplicatio" style="left: 18px; top: 478px; position: absolute; color: black; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">Bachelor's in Computer Applicatio</div>
+                        <div class="BachelorSInComputerApplicatio" style="left: 18px; top: 507px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Bachelor's in Computer Applicatio</div>
+                        <div class="2017032019" style="left: 18px; top: 534px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">07/2017 - 03/2019</div>
+                        <div class="122022032023" style="left: 18px; top: 661px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">(12/2022 - 03/2023)</div>
+                        <div class="OakAcademy" style="left: 18px; top: 780px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">Oak Academy</div>
+                        <div class="FullStackWebDevelopmentWithReactJsAngularAndNodejs" style="width: 230px; left: 18px; top: 716px; position: absolute; color: black; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">Full Stack Web Development with <br/>React JS, Angular and NodeJS</div>
+                        <div class="122022032023" style="left: 18px; top: 762px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">(12/2022 - 03/2023)</div>
+                        <div class="HtmlCss" style="left: 429px; top: 273px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">HTML/CSS</div>
+                        <div class="Line7" style="width: 13px; height: 0px; left: 494.50px; top: 273px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 0.50px #FF0000 solid"></div>
+                        <div class="Angular" style="left: 508px; top: 273px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">Angular</div>
+                        <div class="Line8" style="width: 13px; height: 0px; left: 573.50px; top: 273px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 0.50px #FF0000 solid"></div>
+                        <div class="Java" style="left: 429px; top: 322px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">Java</div>
+                        <div class="Line11" style="width: 13px; height: 0px; left: 494.50px; top: 322px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 0.50px #FF0000 solid"></div>
+                        <div class="Nodejs" style="left: 508px; top: 322px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">NodeJS</div>
+                        <div class="Line12" style="width: 13px; height: 0px; left: 573.50px; top: 322px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 0.50px #FF0000 solid"></div>
+                        <div class="React" style="left: 429px; top: 297px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">React</div>
+                        <div class="Line9" style="width: 13px; height: 0px; left: 494.50px; top: 297px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 0.50px #FF0000 solid"></div>
+                        <div class="Php" style="left: 508px; top: 297px; position: absolute; color: black; font-size: 10px; font-family: Inter; font-weight: 300; word-wrap: break-word">PHP</div>
+                        <div class="Line10" style="width: 13px; height: 0px; left: 573.50px; top: 297px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 0.50px #FF0000 solid"></div>
+                      </div>
+                      <button class="btn btn-block mt-2" style="background-color: #bd2e3a; color: white;" (click)="openPDF(0)">Download PDF</button>        
+                </div>
+                <div class="col">
+                    <div class="resume-container" id="htmlData-1">
+                        <div class="resume-header">
+                          <img [src]="resume.imagePath" [alt]="resume.fName" class="profile-image">
+                          <h1>{{resume.fName + ' ' +resume.lName}}</h1>
+                          <!-- <p>Web Developer</p> -->
+                        </div>
+                        <div class="resume-section">
+                          <h5>Contact Information</h5>
+                          <p>Email: {{resume.email}}</p>
+                          <p>Phone: {{resume.mob}}</p>
+                          <p>Address: {{resume.address}}</p>
+                        </div>
+                        <div class="resume-section">
+                          <h5>Summary</h5>
+                          <p>Brief summary or objective statement about yourself and your career goals.</p>
+                        </div>
+                        <div class="resume-section">
+                          <h5>Experience</h5>
+                          <h6>Job Title</h6>
+                          <p>Company Name - Location</p>
+                          <p>Date Range (Month Year - Month Year)</p>
+                          <ul>
+                            <li>Responsibility 1</li>
+                            <li>Responsibility 2</li>
+                            <li>Responsibility 3</li>
+                          </ul>
+                        </div>
+                        <!-- Add more experience items if needed -->
+                    
+                        <div class="resume-section">
+                          <h5>Education</h5>
+                          <h4>{{resume.education1}}</h4>
+                          <p>{{resume.college}}</p>
+                          <p>{{resume.startYear+ ' To ' +resume.endYear}}</p>
+                        </div>
+                        <!-- Add more education items if needed -->
+                    
+                        <div class="resume-section">
+                          <h5>Skills</h5>
+                          <div class="skill-badge">{{resume.skills}}</div>
+                        </div>
+                        <!-- Add more skills if needed -->
+                      </div>
+                      <button class="btn btn-block mt-2" style="background-color: #bd2e3a; color: white;" (click)="openPDF(1)">Download PDF</button>
+                </div>
+
+                
+            </div>
+        </div>

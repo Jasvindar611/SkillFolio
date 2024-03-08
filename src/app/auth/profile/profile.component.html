@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-8">
+      <div class="row">
+        <div class="col-md-6 left-section p-0" (mouseenter)="toggleFlip()" (mouseleave)="toggleFlip()">
+          <div class="flip-container" [ngClass]="{'flipped': isFlipped}">
+            <div class="flipper">
+              <div class="front">
+                <div class="image-container">
+                  <img [src]="userData.imagePath" [alt]="userData.fName">
+                </div>
+              </div>
+              <div class="back">
+                <div class="text-data" *ngFor="let resume of resumes">
+                  <!-- <h1 class="fw-bold fs-1">Resume Data</h1> -->
+                  <p class="fw-bold fs-3">{{ resume.fName + ' ' + resume.lName}}</p>
+                  <p style="font-size: 12px;">{{ resume.email}}</p>
+                  <div class="row">
+                    <div class="col"><p>{{resume.mob}}</p></div>
+                    <div class="col"><p>{{resume.address}}</p></div>
+                    <div class="col"><p>{{resume.dob}}</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col"><p>{{resume.education1}}</p></div>
+                    <div class="col"><p>{{resume.college}}</p></div>
+                    <div class="col-2"><p>{{resume.startYear}}</p></div>
+                    <div class="col-1"><p>TO</p></div>
+                    <div class="col-2"><p>{{resume.endYear}}</p></div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <p>{{resume.skills}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 right-section p-0">
+            <p class=" text-center  fs-3 name-text">{{ userData.fName + ' ' +userData.lName }}</p>
+            <p class="text-center mt-2 mail-text ">{{ userData.email }}</p>
+            <div class="row">
+              <div class="col m-5 fw-lighter opacity-75"><p>{{userData.gender}}</p></div>
+              <div class="col m-5 fw-lighter opacity-75"><p>{{userData.dob}}</p></div>
+            </div>
+            <div class="row mt-4 justify-content-center">
+              <div class="col-5"><button mat-raised-button>Delete Account</button></div>
+              <div class="col-5"><button mat-raised-button>Update Account</button></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

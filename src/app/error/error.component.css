@@ -1,0 +1,43 @@
+/* Custom styles for the dialog */
+.mat-dialog-container {
+    max-width: 400px;
+    padding: 24px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dialog-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .dialog-message {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 24px;
+  }
+  
+  /* Styling for the close button */
+  button[mat-dialog-close] {
+    margin-left: 8px;
+  }
+  
+  /* Styling for the raised button */
+  button.mat-raised-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  button.mat-raised-button:hover {
+    background-color: #0056b3;
+  }
+  
+  button.mat-raised-button:active {
+    background-color: #003c80;
+  }
+  
+  button.mat-raised-button:focus {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  }
+  

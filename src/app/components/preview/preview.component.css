@@ -1,0 +1,82 @@
+h2{
+    color: white;
+}
+h3{
+    font-weight: bold;
+}
+.Ellipse1 {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 18px;
+    top: 43px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.25);
+  }
+  
+  .ProfileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } 
+.resume-imagePath{
+    width: 100%;
+}
+.resume-imagePath img {
+    width: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.resume-container {
+    max-width: 595px;
+    max-height: 842px;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .resume-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .resume-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .resume-header p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .resume-section {
+    margin-bottom: 2rem;
+  }
+  .resume-section h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .resume-section p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  .skill-badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+  }
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+    margin: 0 auto;
+    display: block;
+  }

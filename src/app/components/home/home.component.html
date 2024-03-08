@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="text-center textBox" *ngIf="!userIsAuthenticated">
+    <p class="text-uppercase">Unlock Your</p>
+    <p class="text-uppercase midText" >Potential</p>
+    <p class="text-uppercase" [ngClass]="{'display-5': isSmallScreen()}">Showcase Your Skills</p>
+    <button mat-raised-button class="btn btn-primary startBtn" routerLink="/login">GET STARTED</button>
+    </div>
+
+
+    <div class="textBox" style="text-align: center;" *ngIf="userIsAuthenticated">
+        <h1 style="font-family: 'Agency FB'; font-size: 36px; line-height: 1.2; margin-bottom: 20px; color: white;">
+          Welcome to Skillfolio, <span style="color: #bd2e3a;text-transform: uppercase;">{{fName}}</span>!
+        </h1>
+        <h2 style="font-family: 'Agency FB'; font-size: 24px; color: white; opacity: 0.7; margin-bottom: 40px;">Begin Your Resume Journey and Unleash Your Potential.</h2>
+        <div class="buttonBox">
+        <button mat-raised-button class="templateBtn" routerLink="/template">See Templates</button>
+        <button mat-raised-button class="resumeBtm" routerLink="/resume-builder">Make Your Own Resume</button>
+        </div>
+      </div>
+</div>
+

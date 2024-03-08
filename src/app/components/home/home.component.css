@@ -1,0 +1,48 @@
+p{
+    font-size: 50px;
+    font-family: Agency FB;
+    color: white;
+    margin-top: 70px;
+    /* letter-spacing: 2px; */
+    /* word-spacing: 5px;  */
+    opacity: 0.8;
+}
+.textBox{
+    margin-top: 150px;
+}
+.midText{
+    color: #bd2e3a;
+    opacity: 1 !important;
+}
+.startBtn{
+    margin-top: 50px;
+    height: 45px;
+    width: 180px;
+    background-color: #bd2e3a !important;
+    color:white !important;
+    font-weight:450;
+    transition: 0.4s;
+    opacity: 0.8;
+}
+.startBtn:hover{  
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    border-color: #bd2e3a;
+    transition: 0.5s;
+    opacity: 1 !important;
+}
+.buttonBox{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.templateBtn{
+    margin-right: 10px;
+}
+.resumeBtm{
+    margin-left: 10px;
+    background-color: #bd2e3a !important;
+    box-shadow: 5px 5px 5px black;
+    color:white !important;
+}
