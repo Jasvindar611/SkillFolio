@@ -12,7 +12,7 @@ app.use(cors(
     }
 ))
 
-mongoose.connect("mongodb+srv://Jasvindar:ibgXNyDJgjXdJ1lh@cluster0.ik6pdih.mongodb.net/Resume?retryWrites=true&w=majority")
+mongoose.connect("url")
 .then(() =>{
     console.log("Connected to DataBase");
 }).catch(() =>{
